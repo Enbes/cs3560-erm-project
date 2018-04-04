@@ -1,1 +1,1 @@
-# cs3560-erm-project
+# cs3560-term-project
