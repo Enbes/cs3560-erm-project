@@ -1,0 +1,1 @@
+This program was written by Brodey Dickerson for CS2401 at Ohio university taught by John Dolan. The doc file provided in this folder explains what the students were to do for this project: we were given a game class, and we used it to create a program that mimicked an Othello game.
