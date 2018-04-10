@@ -1,6 +1,6 @@
 //***********************************************************
 //
-//  File:     colors.h
+//  File:     colors.h  
 //
 //  Author:   Matthew Beldyk
 //  Email:    mb245002@ohiou.edu
@@ -60,3 +60,4 @@ const string B_CYAN    = "\e[46m";
 const string B_WHITE   = "\e[47m";
 
 #endif //COLORS_H
+

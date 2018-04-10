@@ -1,11 +1,10 @@
-// File: game.h (part of the namespace main_savitch_14)
+// File: game.h (part of the namespace main_savitch_14)  
 
 
 #ifndef MAIN_SAVITCH_GAME
 #define MAIN_SAVITCH_GAME
 #include <queue>   // Provides queue<string>
 #include <string>  // Provides string
-#include <cctype>
 
 namespace main_savitch_14
 {
@@ -35,14 +34,12 @@ namespace main_savitch_14
     	virtual std::string get_user_move( ) const;
 	virtual who last_mover( ) const 
 	    { return (move_number % 2 == 1 ? HUMAN : COMPUTER); }
+	virtual int moves_completed( ) const { return move_number; }
 	virtual who next_mover( ) const
 	    { return (move_number % 2 == 0 ? HUMAN : COMPUTER); }
 	virtual who opposite(who player) const
 	    { return (player == HUMAN) ? COMPUTER : HUMAN; }
-    virtual who winning( ) const;
-	virtual int moves_completed( ) const { 
-		return move_number; }
-
+    	virtual who winning( ) const;
 
 	// *******************************************************************
 	// VIRTUAL FUNCTIONS THAT MUST BE OVERRIDDEND:
@@ -58,14 +55,14 @@ namespace main_savitch_14
 	// *******************************************************************
 	// (these must be provided for each derived class)
         // Return a pointer to a copy of myself:
-    //	virtual game* clone( ) const = 0;
+    	virtual game* clone( ) const = 0;
         // Compute all the moves that the next player can make:
-   // 	virtual void compute_moves(std::queue<std::string>& moves) const = 0;
+    	virtual void compute_moves(std::queue<std::string>& moves) const = 0;
     	// Display the status of the current game:
     	virtual void display_status( ) const = 0;
     	// Evaluate a board position:
 	// NOTE: positive values are good for the computer.
-    //	virtual int evaluate( ) const = 0;
+    	virtual int evaluate( ) const = 0;
     	// Return true if the current game is finished:
     	virtual bool is_game_over( ) const = 0;
     	// Return true if the given move is legal for the next player:
@@ -80,9 +77,10 @@ namespace main_savitch_14
 	
         // PRIVATE FUNCTIONS (these are the same for every game)
 	int eval_with_lookahead(int look_ahead, int beat_this);
-//	void make_computer_move( );
+	void make_computer_move( );
 	void make_human_move( );
     };
 }
 
 #endif
+

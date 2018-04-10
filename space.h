@@ -1,62 +1,29 @@
-/*
-Name: Braden Baker
-Class: CS 2401
-Date: 4/11/2017
-Project: Project 6 Checkers Game
-*/
-#ifndef SPACE_H
-#define SPACE_H
+//*******************************************************************
+//
+//  Author:      Brodey Dickerson
+//  Email:       bd948215@ohio.edu
+//
+//
+//  Description: Class for a single space
+//
+//  Date:        11/27/2017
+//
+//*******************************************************************
 
-class space 
-{
-  private:
-  
-    bool kingstatus;  
-    enum board { NONE, GREEN, RED };
-    board color;
+class Space{
+public:
+    Space(char c = 'E') {state = c;}
+    //Space(){ state = 'E';}
+    bool is_black()const{return(state == 'B');}
+    bool is_white()const{return(state == 'W');}
+    bool is_empty()const{return(state == 'E');}
     
-  public:
-    space() { 
-        color = NONE; 
-        kingstatus = false;
-        }
-
-    void make_king() { 
-        kingstatus = true; 
-        }
+    //Mutator
+    void flip(){if(state == 'B') state = 'W';else if(state == 'W') state = 'B';}
+    void set_empty(){state = 'E';}
+    void set_white(){state = 'W';}
+    void set_black(){state = 'B';}
     
-    void make_green() { 
-        color = GREEN; 
-        }
-    void make_red() { 
-        color = RED; 
-        }
-    void make_neutral() { 
-        color = NONE; 
-        kingstatus = false;
-        }
-    void kingslayer() { 
-        kingstatus = false; 
-        }
-    bool is_king() const { 
-        return kingstatus; 
-        }
-
-    bool is_green() const
-    {
-        if (color == GREEN) return true;
-        else return false;
-    }
-    bool is_red() const
-    {
-        if (color == RED) return true;
-        else return false;
-    }
-    bool is_neutral() const
-    {
-        if (color == NONE) return true;
-        else return false;
-    }
+private:
+    char state;
 };
-
-#endif 
