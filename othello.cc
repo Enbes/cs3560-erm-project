@@ -1,3 +1,11 @@
+/**
+* @file othello.cc
+* @brief Implementation of the Othello class
+* @author Brodey Dickerson (original code, fixes), Braden Baker (fixes), Corbin Dotson (documentation)
+*
+* This file contains the implementation of the Othello class' functions.
+*/
+
 //*******************************************************************
 //
 //  Author:      Brodey Dickerson
@@ -18,6 +26,11 @@ using namespace main_savitch_14;
 
 //                              restart
 //*******************************************************************
+/**
+* Restarts the game by emptying the board, then placing the initial pieces on the board.
+* takes no arguments
+* @return void
+*/
 void Othello::restart(){
     //pass to zero
     passes = 0;
@@ -40,6 +53,11 @@ void Othello::restart(){
 
 //                          is_legal
 //*******************************************************************
+/**
+* Decides if a proposed move is legal by checking if the space is on the board, is adjacent to an opposing piece, and is empty.
+* @param move: a string representing the board location where a piece is trying to be placed
+* @return bool: true if the move is legal, false otherwise
+*/
 bool Othello::is_legal(const string& move)const{
     //coverting string to ints: easier to surf board
     int row = int(toupper(move[0] - 'A'));
@@ -93,6 +111,11 @@ bool Othello::is_legal(const string& move)const{
 
 //                          make_move
 //*******************************************************************
+/**
+* []
+* @param 
+* @return 
+*/
 void Othello::make_move(const string& move){
     //moving piece
     int row = int(toupper(move[0] - 'A'));
@@ -170,6 +193,11 @@ void Othello::make_move(const string& move){
 
 //                          display_status
 //*******************************************************************
+/**
+* []
+* @param 
+* @return 
+*/
 void Othello::display_status()const{
     //Color decloration for checker patern (USED LATER)
     const string COLOR_1 = B_CYAN;
@@ -243,6 +271,11 @@ void Othello::display_status()const{
 //               The best functions I've ever written :D
 //*******************************************************************
 //                      TEST FOR WHITE PIECES
+/**
+* []
+* @param 
+* @return 
+*/
 bool Othello::test_for_white(int tmp_row, int tmp_column,int row_op, int column_op)const{
     while(tmp_row >= 0 && tmp_row < 8 && tmp_column >= 0 && tmp_column < 8 && board[tmp_row][tmp_column].is_white()){
         tmp_row = tmp_row + row_op;
@@ -252,6 +285,11 @@ bool Othello::test_for_white(int tmp_row, int tmp_column,int row_op, int column_
     else return(board[tmp_row][tmp_column].is_black());
 }
 //                      TEST FOR BLACK PIECES
+/**
+* []
+* @param 
+* @return 
+*/
 bool Othello::test_for_black(int tmp_row, int tmp_column,int row_op, int column_op)const{
     while(tmp_row >= 0 && tmp_row < 8 && tmp_column >= 0 && tmp_column < 8 && board[tmp_row][tmp_column].is_black()){
         tmp_row = tmp_row + row_op;
@@ -261,6 +299,11 @@ bool Othello::test_for_black(int tmp_row, int tmp_column,int row_op, int column_
     else return(board[tmp_row][tmp_column].is_white());
 }
 //*******************************************************************
+/**
+* []
+* @param 
+* @return 
+*/
 void Othello::flip_spaces(int tmp_row, int tmp_column, int row_op, int column_op){
     if(next_mover() == HUMAN){
         while(tmp_row >= 0 && tmp_row < 8 && tmp_column >= 0 && tmp_column < 8 && board[tmp_row][tmp_column].is_white()){
@@ -284,6 +327,11 @@ void Othello::flip_spaces(int tmp_row, int tmp_column, int row_op, int column_op
 
 //                          Compute Moves
 //*******************************************************************
+/**
+* []
+* @param 
+* @return 
+*/
 void Othello::compute_moves(std::queue<std::string>& moves)const{
   /*  string move = " ";
     for(char i = 'A'; i < 'I';i++){
@@ -317,6 +365,11 @@ void Othello::compute_moves(std::queue<std::string>& moves)const{
 
 //                          Evaluate
 //*******************************************************************
+/**
+* []
+* @param 
+* @return 
+*/
 int Othello::evaluate()const{
     int num = 0;
     for(int i = 0; i < 8; i++){
@@ -330,7 +383,11 @@ int Othello::evaluate()const{
 //*******************************************************************
 
 
-
+/**
+* []
+* @param 
+* @return 
+*/
 game::who Othello::winning()const{
     int p1 = 0;
     int p2 = 0;

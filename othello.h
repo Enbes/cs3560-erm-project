@@ -1,3 +1,11 @@
+/**
+* @file othello.h
+* @brief Header for the Othello class
+* @author Brodey Dickerson (original code, fixes), Braden Baker (fixes), Corbin Dotson (documentation)
+*
+* This file contains the definition of the Othello class. Othello is a child of the game class and contains both public and private components.
+* Othello also contains the vast majority of the functions needed to run the game.
+*/
 //*******************************************************************
 //
 //  Author:      Brodey Dickerson
