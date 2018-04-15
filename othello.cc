@@ -112,9 +112,9 @@ bool Othello::is_legal(const string& move)const{
 //                          make_move
 //*******************************************************************
 /**
-* []
-* @param 
-* @return 
+* Alters the game board to show the result of a new piece being placed.
+* @param move: a string representing the board location where a piece is trying to be placed 
+* @return void
 */
 void Othello::make_move(const string& move){
     //moving piece
@@ -194,9 +194,9 @@ void Othello::make_move(const string& move){
 //                          display_status
 //*******************************************************************
 /**
-* []
-* @param 
-* @return 
+* Displays the game board, including a turn counter and the number of each player's pieces on the board.
+* @param takes no arguments
+* @return void
 */
 void Othello::display_status()const{
     //Color decloration for checker patern (USED LATER)
@@ -272,9 +272,9 @@ void Othello::display_status()const{
 //*******************************************************************
 //                      TEST FOR WHITE PIECES
 /**
-* []
-* @param 
-* @return 
+* Looks along a vector of spaces starting to determine if it contains some number of white pieces.
+* @param tmp_row: start row number, tmp_column: start column number, row_op: change in row number for vector, column_op: change in column number for vector
+* @return bool: true if a vector of spaces are all white and ends with black, otherwise false
 */
 bool Othello::test_for_white(int tmp_row, int tmp_column,int row_op, int column_op)const{
     while(tmp_row >= 0 && tmp_row < 8 && tmp_column >= 0 && tmp_column < 8 && board[tmp_row][tmp_column].is_white()){
@@ -286,9 +286,9 @@ bool Othello::test_for_white(int tmp_row, int tmp_column,int row_op, int column_
 }
 //                      TEST FOR BLACK PIECES
 /**
-* []
-* @param 
-* @return 
+* Looks along a vector of spaces starting to determine if it contains some number of black pieces.
+* @param tmp_row: start row number, tmp_column: start column number, row_op: change in row number for vector, column_op: change in column number for vector
+* @return bool: true if a vector of spaces are all black and ends with white, otherwise false
 */
 bool Othello::test_for_black(int tmp_row, int tmp_column,int row_op, int column_op)const{
     while(tmp_row >= 0 && tmp_row < 8 && tmp_column >= 0 && tmp_column < 8 && board[tmp_row][tmp_column].is_black()){
@@ -300,9 +300,9 @@ bool Othello::test_for_black(int tmp_row, int tmp_column,int row_op, int column_
 }
 //*******************************************************************
 /**
-* []
-* @param 
-* @return 
+* Flips pieces to the opposite color along a vector and ending when encountering a piece of this player's color.
+* @param tmp_row: start row number, tmp_column: start column number, row_op: change in row number for vector, column_op: change in column number for vector
+* @return void
 */
 void Othello::flip_spaces(int tmp_row, int tmp_column, int row_op, int column_op){
     if(next_mover() == HUMAN){
@@ -328,9 +328,9 @@ void Othello::flip_spaces(int tmp_row, int tmp_column, int row_op, int column_op
 //                          Compute Moves
 //*******************************************************************
 /**
-* []
-* @param 
-* @return 
+* Attempts all possible moves until finding a valid one.
+* @param moves: a queue of strings white define possible moves
+* @return void
 */
 void Othello::compute_moves(std::queue<std::string>& moves)const{
   /*  string move = " ";
@@ -366,9 +366,9 @@ void Othello::compute_moves(std::queue<std::string>& moves)const{
 //                          Evaluate
 //*******************************************************************
 /**
-* []
-* @param 
-* @return 
+* Checks to see which player has more pieces on the board.
+* @param takes no arguments
+* @return int: how many more pieces the white player has than the black, thus negative if black is in the lead
 */
 int Othello::evaluate()const{
     int num = 0;
@@ -384,9 +384,9 @@ int Othello::evaluate()const{
 
 
 /**
-* []
-* @param 
-* @return 
+* Checks to see which player is winning.
+* @param takes no arguments
+* @return game::who: the winning player
 */
 game::who Othello::winning()const{
     int p1 = 0;
