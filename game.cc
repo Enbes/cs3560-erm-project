@@ -1,3 +1,12 @@
+/**
+* @file game.cc
+* @brief Game class implementation file
+* @author Savitch (original code), Corbin Dotson (documentation)
+*
+* This file contains the implementations of functions in the game class. The game
+* class is used to build the Othello class.
+*/
+
 // File: game.cxx
 
 #include <cassert>    // Provides assert
@@ -16,7 +25,12 @@ namespace main_savitch_14
     
     //*************************************************************************
     // PUBLIC MEMBER FUNCTIONS
-    
+ 
+    /**
+    * []
+    * takes 
+    * @return 
+    */   
     game::who game::play( )
     // The play function should not be overridden. It plays one round of the
     // game, with the human player moving first and the computer second.
@@ -41,12 +55,22 @@ namespace main_savitch_14
     
     //*************************************************************************
     // OPTIONAL VIRTUAL FUNCTIONS (overriding these functions is optional)
-    
+
+    /**
+    * Displays a message to the user.
+    * @param message: the string to be displayed
+    * @return void
+    */      
     void game::display_message(const string& message) const
     {
         cout << message;
     }
-    
+
+    /**
+    * Gets the user's desired move.
+    * takes no arguments
+    * @return string: the coordinates of the move the user wishes to execute
+    */      
     string game::get_user_move( ) const
     {
         string answer;
@@ -56,7 +80,12 @@ namespace main_savitch_14
         answer[0] = toupper(answer[0]);
         return answer;
     }
-    
+
+    /**
+    * Returns who is winning.
+    * takes no arguments
+    * @return game::who: HUMAN, COMPUTER, or NEUTRAL if tied
+    */      
     game::who game::winning( ) const
     {
         int value = evaluate( ); // Evaluate based on move that was just made.
@@ -73,7 +102,12 @@ namespace main_savitch_14
     
     //*************************************************************************
     // PRIVATE FUNCTIONS (these are the same for every game)
-    
+
+    /**
+    * Evaluate a board position with lookahead.
+    * @param look_ahead: how deep the lookahead should go in evaluation, beat_this: value of another move being considered
+    * @return int: a larger value represents a better move
+    */      
     int game::eval_with_lookahead(int look_ahead, int beat_this)
     // Evaluate a board position with lookahead.
     // --int look_aheads:  How deep the lookahead should go to evaluate the move.
@@ -119,7 +153,12 @@ namespace main_savitch_14
         // The answer we return should be from player's perspective, so multiply times -1:
         return -best_value;
     }
-    
+
+    /**
+    * Uses a simple AI to have COMPUTER make a move.
+    * takes no arguments
+    * @return void
+    */      
     void game::make_computer_move( )
     {
         queue<string> moves;
@@ -153,7 +192,12 @@ namespace main_savitch_14
         cout << "Computer chose: " << best_move << endl;;
         make_move(best_move);
     }
-    
+
+    /**
+    * Gets the user's move, and if valid inputs it to the game. Otherwise, it will ask for new and valid move.
+    * takes no arguments
+    * @return void
+    */      
     void game::make_human_move( )
     {
         string move;
