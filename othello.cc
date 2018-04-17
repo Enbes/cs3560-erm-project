@@ -194,8 +194,8 @@ void Othello::make_move(const string& move){
 //                          display_status
 //*******************************************************************
 /**
-* Displays the game board, including a turn counter and the number of each player's pieces on the board.
-* @param takes no arguments
+* Displays the game board, including a turn counter and the number of each player's pieces on the board.\n
+* takes no arguments
 * @return void
 */
 void Othello::display_status()const{
@@ -273,7 +273,10 @@ void Othello::display_status()const{
 //                      TEST FOR WHITE PIECES
 /**
 * Looks along a vector of spaces starting to determine if it contains some number of white pieces.
-* @param tmp_row: start row number, tmp_column: start column number, row_op: change in row number for vector, column_op: change in column number for vector
+* @param tmp_row: start row number
+* @param tmp_column: start column number
+* @param row_op: change in row number for vector
+* @param column_op: change in column number for vector
 * @return bool: true if a vector of spaces are all white and ends with black, otherwise false
 */
 bool Othello::test_for_white(int tmp_row, int tmp_column,int row_op, int column_op)const{
@@ -287,7 +290,10 @@ bool Othello::test_for_white(int tmp_row, int tmp_column,int row_op, int column_
 //                      TEST FOR BLACK PIECES
 /**
 * Looks along a vector of spaces starting to determine if it contains some number of black pieces.
-* @param tmp_row: start row number, tmp_column: start column number, row_op: change in row number for vector, column_op: change in column number for vector
+* @param tmp_row: start row number
+* @param tmp_column: start column number
+* @param row_op: change in row number for vector
+* @param column_op: change in column number for vector
 * @return bool: true if a vector of spaces are all black and ends with white, otherwise false
 */
 bool Othello::test_for_black(int tmp_row, int tmp_column,int row_op, int column_op)const{
@@ -301,7 +307,10 @@ bool Othello::test_for_black(int tmp_row, int tmp_column,int row_op, int column_
 //*******************************************************************
 /**
 * Flips pieces to the opposite color along a vector and ending when encountering a piece of this player's color.
-* @param tmp_row: start row number, tmp_column: start column number, row_op: change in row number for vector, column_op: change in column number for vector
+* @param tmp_row: start row number
+* @param tmp_column: start column number
+* @param row_op: change in row number for vector
+* @param column_op: change in column number for vector
 * @return void
 */
 void Othello::flip_spaces(int tmp_row, int tmp_column, int row_op, int column_op){
@@ -366,8 +375,8 @@ void Othello::compute_moves(std::queue<std::string>& moves)const{
 //                          Evaluate
 //*******************************************************************
 /**
-* Checks to see which player has more pieces on the board.
-* @param takes no arguments
+* Checks to see which player has more pieces on the board.\n
+* takes no arguments
 * @return int: how many more pieces the white player has than the black, thus negative if black is in the lead
 */
 int Othello::evaluate()const{
@@ -384,8 +393,8 @@ int Othello::evaluate()const{
 
 
 /**
-* Checks to see which player is winning.
-* @param takes no arguments
+* Checks to see which player is winning.\n
+* takes no arguments
 * @return game::who: the winning player
 */
 game::who Othello::winning()const{
