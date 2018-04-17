@@ -1,3 +1,12 @@
+/**
+* @file space.h
+* @brief Header file for space class
+* @author Brodey Dickerson (original code), Corbin Dotson (documentation)
+* 
+* This file is a header file for the space class. It contains both the definition
+* and implementation of the space class.
+*/
+
 //*******************************************************************
 //
 //  Author:      Brodey Dickerson
