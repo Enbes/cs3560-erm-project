@@ -60,6 +60,7 @@ void Othello::restart(){
 */
 bool Othello::is_legal(const string& move)const{
     //coverting string to ints: easier to surf board
+    if(move[0] < 'A') return false;
     int row = int(toupper(move[0] - 'A'));
     int column = int(move[1] - '1');
     
