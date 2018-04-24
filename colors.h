@@ -1,7 +1,7 @@
 /**
 * @file colors.h
 * @brief Allows for easy use of coloring output strings.
-* @author Matthew Beldyk (code), Corbin Dotson (documentation)
+* @author Matthew Beldyk (code), Corbin Dotson (documentation), Braden Baker (error checking)
 *
 * This file declares a number of constants which make it easy to give a color to output strings.
 */

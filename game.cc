@@ -1,7 +1,7 @@
 /**
 * @file game.cc
 * @brief Game class implementation file
-* @author Savitch (original code), Corbin Dotson (documentation)
+* @author Savitch (original code), Corbin Dotson (documentation), Braden Baker (error checking)
 *
 * This file contains the implementations of functions in the game class. The game
 * class is used to build the Othello class.
@@ -117,7 +117,6 @@ namespace main_savitch_14
     // moved.
     {
         queue<string> moves;   // All possible opponent moves
-        int value;             // Value of a board position after opponent moves
         int best_value;        // Evaluation of best opponent move
         game* future;          // Pointer to a future version of this game
         
@@ -138,6 +137,7 @@ namespace main_savitch_14
         best_value = INT_MIN;
         while (!moves.empty( ))
         {
+            int value;             // Value of a board position after opponent moves
             future = clone( );
             future->make_move(moves.front( ));
             value = future->eval_with_lookahead(look_ahead-1, best_value);
@@ -162,7 +162,6 @@ namespace main_savitch_14
     void game::make_computer_move( )
     {
         queue<string> moves;
-        int value;
         int best_value;
         string best_move;
         game* future;
@@ -176,6 +175,7 @@ namespace main_savitch_14
         best_value = INT_MIN;
         while (!moves.empty( ))
         {
+            int value;
             future = clone( );
             future->make_move(moves.front( ));
             value = future->eval_with_lookahead(SEARCH_LEVELS, best_value);

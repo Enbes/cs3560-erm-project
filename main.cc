@@ -1,7 +1,7 @@
 /**
 * @file main.cc
 * @brief Main function
-* @author Brodey Dickerson (original code), Corbin Dotson (documentation)
+* @author Brodey Dickerson (original code), Corbin Dotson (documentation), Braden Baker (error checking)
 *
 * This file only contains the main function to run the program. It declares 
 * several variables for the game, and begins its execution.

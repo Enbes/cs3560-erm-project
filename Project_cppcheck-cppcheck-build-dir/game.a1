@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1752866478">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="play" lineNumber="34"/>
+    <functiondecl functionName="display_message" lineNumber="64"/>
+    <functiondecl functionName="get_user_move" lineNumber="74"/>
+    <functiondecl functionName="winning" lineNumber="89"/>
+    <functiondecl functionName="eval_with_lookahead" lineNumber="111"/>
+    <functiondecl functionName="make_computer_move" lineNumber="162"/>
+    <functiondecl functionName="make_human_move" lineNumber="201"/>
+    <functioncall functionName="COMPUTER"/>
+    <functioncall functionName="HUMAN"/>
+    <functioncall functionName="INT_MIN"/>
+    <functioncall functionName="NEUTRAL"/>
+    <functioncall functionName="SEARCH_LEVELS"/>
+    <functioncall functionName="answer"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="best_move"/>
+    <functioncall functionName="best_value"/>
+    <functioncall functionName="cin"/>
+    <functioncall functionName="clone"/>
+    <functioncall functionName="compute_moves"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="display_message"/>
+    <functioncall functionName="display_status"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="eval_with_lookahead"/>
+    <functioncall functionName="evaluate"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="game"/>
+    <functioncall functionName="get_user_move"/>
+    <functioncall functionName="getline"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_game_over"/>
+    <functioncall functionName="is_legal"/>
+    <functioncall functionName="last_mover"/>
+    <functioncall functionName="make_computer_move"/>
+    <functioncall functionName="make_human_move"/>
+    <functioncall functionName="make_move"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="moves"/>
+    <functioncall functionName="next_mover"/>
+    <functioncall functionName="pop"/>
+    <functioncall functionName="restart"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="toupper"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="winning"/>
+  </FileInfo>
+</analyzerinfo>

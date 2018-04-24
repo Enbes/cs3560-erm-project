@@ -1,0 +1,3 @@
+game.a1::C:/Users/Braden/Desktop/College Books and college stuff/SoftwareEngineeringTools&Practices/term_project/game.cc
+main.a1::C:/Users/Braden/Desktop/College Books and college stuff/SoftwareEngineeringTools&Practices/term_project/main.cc
+othello.a1::C:/Users/Braden/Desktop/College Books and college stuff/SoftwareEngineeringTools&Practices/term_project/othello.cc

@@ -1,7 +1,7 @@
 /**
 * @file game.h
 * @brief Header file for game class
-* @author Savitch (original code), Corbin Dotson (documentation)
+* @author Savitch (original code), Corbin Dotson (documentation), Braden Baker (error checking)
 *
 * This file is a header file which describes the game class. It contains many protected functions for the Othello class to use.
 */

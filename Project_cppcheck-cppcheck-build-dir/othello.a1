@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2190947389">
+        <error id="invalidFunctionArg" severity="error" msg="Invalid toupper() argument nr 1. The value is -33 but the valid values are &apos;0:255&apos;." verbose="Invalid toupper() argument nr 1. The value is -33 but the valid values are &apos;0:255&apos;." cwe="628">
+            <location file0="C:\Users\Braden\Desktop\College Books and college stuff\SoftwareEngineeringTools&amp;Practices\term_project\othello.cc" file="C:\Users\Braden\Desktop\College Books and college stuff\SoftwareEngineeringTools&amp;Practices\term_project\othello.cc" line="63" info="Invalid argument"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Space&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Space&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="C:\Users\Braden\Desktop\College Books and college stuff\SoftwareEngineeringTools&amp;Practices\term_project\othello.cc" file="C:\Users\Braden\Desktop\College Books and college stuff\SoftwareEngineeringTools&amp;Practices\term_project\space.h" line="24"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="restart" lineNumber="34"/>
+    <functiondecl functionName="is_legal" lineNumber="61"/>
+    <functiondecl functionName="make_move" lineNumber="119"/>
+    <functiondecl functionName="display_status" lineNumber="201"/>
+    <functiondecl functionName="test_for_white" lineNumber="279"/>
+    <functiondecl functionName="test_for_black" lineNumber="293"/>
+    <functiondecl functionName="flip_spaces" lineNumber="307"/>
+    <functiondecl functionName="compute_moves" lineNumber="335"/>
+    <functiondecl functionName="evaluate" lineNumber="373"/>
+    <functiondecl functionName="winning" lineNumber="391"/>
+    <functioncall functionName="B_BLUE"/>
+    <functioncall functionName="B_CYAN"/>
+    <functioncall functionName="COMPUTER"/>
+    <functioncall functionName="HUMAN"/>
+    <functioncall functionName="NEUTRAL"/>
+    <functioncall functionName="Othello"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="column"/>
+    <functioncall functionName="column_op"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="flip"/>
+    <functioncall functionName="flip_spaces"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="game"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_black"/>
+    <functioncall functionName="is_empty"/>
+    <functioncall functionName="is_legal"/>
+    <functioncall functionName="is_white"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="last_mover"/>
+    <functioncall functionName="make_move"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="moves_completed"/>
+    <functioncall functionName="next_mover"/>
+    <functioncall functionName="push"/>
+    <functioncall functionName="restart"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="row"/>
+    <functioncall functionName="row_op"/>
+    <functioncall functionName="set_black"/>
+    <functioncall functionName="set_empty"/>
+    <functioncall functionName="set_white"/>
+    <functioncall functionName="test_for_black"/>
+    <functioncall functionName="test_for_white"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp_column"/>
+    <functioncall functionName="tmp_row"/>
+    <functioncall functionName="toupper"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

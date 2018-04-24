@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="321340708">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Space&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Space&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="C:\Users\Braden\Desktop\College Books and college stuff\SoftwareEngineeringTools&amp;Practices\term_project\main.cc" file="C:\Users\Braden\Desktop\College Books and college stuff\SoftwareEngineeringTools&amp;Practices\term_project\space.h" line="24"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="28"/>
+    <functioncall functionName="COMPUTER"/>
+    <functioncall functionName="HUMAN"/>
+    <functioncall functionName="NEUTRAL"/>
+    <functioncall functionName="Othello"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="game"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="moves_completed"/>
+    <functioncall functionName="play"/>
+    <functioncall functionName="restart"/>
+    <functioncall functionName="return"/>
+  </FileInfo>
+</analyzerinfo>
