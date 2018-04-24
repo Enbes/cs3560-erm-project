@@ -27,9 +27,9 @@ namespace main_savitch_14
     // PUBLIC MEMBER FUNCTIONS
  
     /**
-    * []
-    * takes 
-    * @return 
+    * Plays the game.\n
+    * takes no arguments
+    * @return game::who: the winner of the game
     */   
     game::who game::play( )
     // The play function should not be overridden. It plays one round of the
@@ -67,7 +67,7 @@ namespace main_savitch_14
     }
 
     /**
-    * Gets the user's desired move.
+    * Gets the user's desired move.\n
     * takes no arguments
     * @return string: the coordinates of the move the user wishes to execute
     */      
@@ -82,7 +82,7 @@ namespace main_savitch_14
     }
 
     /**
-    * Returns who is winning.
+    * Determines who is currently winning the game.\n
     * takes no arguments
     * @return game::who: HUMAN, COMPUTER, or NEUTRAL if tied
     */      
@@ -105,7 +105,8 @@ namespace main_savitch_14
 
     /**
     * Evaluate a board position with lookahead.
-    * @param look_ahead: how deep the lookahead should go in evaluation, beat_this: value of another move being considered
+    * @param look_ahead: how deep the lookahead should go in evaluation
+    * @param beat_this: value of another move being considered
     * @return int: a larger value represents a better move
     */      
     int game::eval_with_lookahead(int look_ahead, int beat_this)
